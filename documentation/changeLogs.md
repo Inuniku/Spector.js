@@ -4,11 +4,27 @@
 ## Change Log
 Please, find below the per release summary of the contribution added to the project per version. Each of the listed versions is having its corresponding tag in the repo.
 
+## v0.9.33
+
+## v0.9.32
+* Fix [Capture on Reload](https://github.com/BabylonJS/Spector.js/issues/313)
+
+## v0.9.31
+* Fix [Manifest V2](https://github.com/BabylonJS/Spector.js/issues/312)
+* Fix [Request Non GL contexts](https://github.com/BabylonJS/Spector.js/issues/307)
+
 ## v0.9.30
 * Fix [Scissor function call](https://github.com/BabylonJS/Spector.js/issues/266)
 * Fix [bufferSubData and getAttribLocation number report](https://github.com/BabylonJS/Spector.js/issues/262)
 * Fix [Dataview representation](https://github.com/BabylonJS/Spector.js/issues/263)
 * Fix [Multidraw spy](https://github.com/BabylonJS/Spector.js/issues/253)
+* Fix [Preprocessor beautify](https://github.com/BabylonJS/Spector.js/pull/272)
+* Fix [Float buffer capture](https://github.com/BabylonJS/Spector.js/pull/276)
+* Add [GLSL Beautifier Toggle](https://github.com/BabylonJS/Spector.js/pull/282)
+* Add [GLSL Prepocessor Toggle](https://github.com/BabylonJS/Spector.js/pull/295)
+* Fix [BaseVertexBaseInstance Capture](https://github.com/BabylonJS/Spector.js/pull/284)
+* Fix [XR spy on firefox](https://github.com/BabylonJS/Spector.js/pull/285)
+* Fix [Frame Buffer visual state](https://github.com/BabylonJS/Spector.js/pull/292)
 
 ## v0.9.29
 * Add [WebXR tracking capabilities](https://github.com/BabylonJS/Spector.js/pull/257)

@@ -170,7 +170,7 @@ export class VisualState extends BaseState {
 
             const status = this.context.checkFramebufferStatus(WebGlConstants.FRAMEBUFFER.value);
             if (status === WebGlConstants.FRAMEBUFFER_COMPLETE.value) {
-                this.getCapture(gl, webglConstant.name, x, y, width, height, 0, 0, WebGlConstants.UNSIGNED_BYTE.value);
+                this.getCapture(gl, webglConstant.name, x, y, width, height, 0, 0, componentType);
             }
 
             gl.bindFramebuffer(WebGlConstants.FRAMEBUFFER.value, frameBuffer);
@@ -207,7 +207,9 @@ export class VisualState extends BaseState {
             const info = storage.__SPECTOR_Object_CustomData as ITextureRecorderData;
             width = info.width;
             height = info.height;
-            textureType = info.type;
+            if (info.type !== undefined) {
+                textureType = info.type;
+            }
             knownAsTextureArray = info.target === WebGlConstants.TEXTURE_2D_ARRAY.name;
             if (!ReadPixelsHelper.isSupportedCombination(info.type, info.format, info.internalFormat)) {
                 return;
@@ -239,6 +241,9 @@ export class VisualState extends BaseState {
 
     protected getCapture(gl: WebGLRenderingContext, name: string, x: number, y: number, width: number, height: number,
         textureCubeMapFace: number, textureLayer: number, type: number) {
+        width = Math.floor(width);
+        height = Math.floor(height);
+
         const attachmentVisualState = {
             attachmentName: name,
             src: null as string,
@@ -254,7 +259,7 @@ export class VisualState extends BaseState {
                     // Copy the pixels to a working 2D canvas same size.
                     this.workingCanvas.width = width;
                     this.workingCanvas.height = height;
-                    const imageData = this.workingContext2D.createImageData(Math.ceil(width), Math.ceil(height));
+                    const imageData = this.workingContext2D.createImageData(width, height);
                     imageData.data.set(pixels);
                     this.workingContext2D.putImageData(imageData, 0, 0);
 

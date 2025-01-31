@@ -1,6 +1,6 @@
 {
   "name": "spectorjs",
-  "version": "0.9.29",
+  "version": "0.9.33",
   "description": "Explore and Troubleshoot your WebGL scenes easily.",
   "keywords": [
     "webgl",
@@ -32,6 +32,9 @@
     "build:tslint": "tslint -c ./tslint.json -p ./src/tsconfig.json",
     "build": "run-s build:tslint build:bundle build:copybuild:copy:bundle build:concatBundleFunc -n",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@shaderfrog/glsl-parser": "^5.0.0"
   },
   "devDependencies": {
     "@types/webxr": "^0.5.1",

@@ -35,7 +35,7 @@ This can be used either as a *browser extension* or directly from your page with
 
 ## Why
 ###### [Back to top](#table-of-content)
-As a core member of the BabylonJS team I often found the need to debug what was happening to my webgl context. I was a huge fan of webgl inspector until we introduced WebGl2 in Babylon. As the WebGL community as a whole is our focus, I thought it would be great to share an extension compatible with all the Webgl/Webgl2 engines available.
+As a core member of the BabylonJS team I often found the need to debug what was happening to my webgl context. I was a huge fan of webgl inspector until we introduced WebGL2 in Babylon. As the WebGL community as a whole is our focus, I thought it would be great to share an extension compatible with all the Webgl/Webgl2 engines available.
 
 You can use the library inside of your own application easily as it is transpiled as a UMD module. It will either work as a script reference or with your favorite bundling tools like webpack.
 
@@ -112,7 +112,7 @@ You are all set. You can open your index.html file and see the inspector running
 ###### [Back to top](#table-of-content)
 
 ### CDN
-Feel free to leverage the CDN to use the library from your own projets: [https://spectorcdn.babylonjs.com/spector.bundle.js](https://spectorcdn.babylonjs.com/spector.bundle.js)
+Feel free to leverage the jsDeliver CDN to use the library from your own projets: [https://cdn.jsdelivr.net/npm/spectorjs@0.9.30/dist/spector.bundle.js](https://cdn.jsdelivr.net/npm/spectorjs@0.9.30/dist/spector.bundle.js)
 
 ### Repo
 If you prefer to host your own version, the library is available in the [dist](https://github.com/BabylonJS/Spector.js/blob/master/dist/spector.bundle.js) folder of the repo.
